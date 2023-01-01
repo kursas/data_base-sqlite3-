@@ -1,0 +1,128 @@
+[
+    {
+        "GIMIMO_DATA": "1980-09-20",
+        "PAREIGOS": "Programuotojas",
+        "PAVARDĖ": "Jačas",
+        "SKYRIUS_PAVADINIMAS": "Gamybos",
+        "VARDAS": "Martynas"
+    },
+    {
+        "GIMIMO_DATA": "1986-02-11",
+        "PAREIGOS": "Vadybininkas",
+        "PAVARDĖ": "Jablonkskaitė",
+        "SKYRIUS_PAVADINIMAS": "Pardavimų",
+        "VARDAS": "Goda"
+    },
+    {
+        "GIMIMO_DATA": "1990-08-20",
+        "PAREIGOS": "Testuotojas",
+        "PAVARDĖ": "Gabalis",
+        "SKYRIUS_PAVADINIMAS": "Gamybos",
+        "VARDAS": "Mantas"
+    },
+    {
+        "GIMIMO_DATA": "1994-02-13",
+        "PAREIGOS": "Programuotojas",
+        "PAVARDĖ": "Lukas",
+        "SKYRIUS_PAVADINIMAS": "Gamybos",
+        "VARDAS": "Arnoldas"
+    },
+    {
+        "GIMIMO_DATA": "1998-03-12",
+        "PAREIGOS": "Buhalterė",
+        "PAVARDĖ": "Jačiulytė",
+        "SKYRIUS_PAVADINIMAS": "Finansų",
+        "VARDAS": "Maja"
+    },
+    {
+        "GIMIMO_DATA": "2000-04-23",
+        "PAREIGOS": "Programuotojas",
+        "PAVARDĖ": "Taileikis",
+        "SKYRIUS_PAVADINIMAS": "Gamybos",
+        "VARDAS": "Mikas"
+    },
+    {
+        "GIMIMO_DATA": "1986-05-30",
+        "PAREIGOS": "Vadovas",
+        "PAVARDĖ": "Vaicekauskas",
+        "SKYRIUS_PAVADINIMAS": "Vadovybės",
+        "VARDAS": "Giedrius"
+    },
+    {
+        "GIMIMO_DATA": "1986-09-19",
+        "PAREIGOS": "Finansininkas",
+        "PAVARDĖ": "Babavičius",
+        "SKYRIUS_PAVADINIMAS": "Finansų",
+        "VARDAS": "Romas"
+    },
+    {
+        "GIMIMO_DATA": "1986-09-19",
+        "PAREIGOS": "Testuotojas",
+        "PAVARDĖ": "Babavičiūtė",
+        "SKYRIUS_PAVADINIMAS": "Gamybos",
+        "VARDAS": "Milda"
+    },
+    {
+        "GIMIMO_DATA": "1999-03-13",
+        "PAREIGOS": "Testuotojas",
+        "PAVARDĖ": "Sabaliauskas",
+        "SKYRIUS_PAVADINIMAS": "Gamybos",
+        "VARDAS": "Domas"
+    },
+    {
+        "GIMIMO_DATA": "1998-06-23",
+        "PAREIGOS": "Vadybininkas",
+        "PAVARDĖ": "Sabutis",
+        "SKYRIUS_PAVADINIMAS": "Pardavimų",
+        "VARDAS": "Dainius"
+    },
+    {
+        "GIMIMO_DATA": "1980-05-30",
+        "PAREIGOS": "Programuotojas",
+        "PAVARDĖ": "Ubartas",
+        "SKYRIUS_PAVADINIMAS": "Gamybos",
+        "VARDAS": "Tautvydas"
+    },
+    {
+        "GIMIMO_DATA": "1994-02-02",
+        "PAREIGOS": "Vadybininkas",
+        "PAVARDĖ": "Sabutis",
+        "SKYRIUS_PAVADINIMAS": "Pardavimų",
+        "VARDAS": "Henrikas"
+    },
+    {
+        "GIMIMO_DATA": "1985-06-30",
+        "PAREIGOS": "Programuotojas",
+        "PAVARDĖ": "Jačas",
+        "SKYRIUS_PAVADINIMAS": "Gamybos",
+        "VARDAS": "Arnoldas"
+    },
+    {
+        "GIMIMO_DATA": "1988-03-12",
+        "PAREIGOS": "Vadovas",
+        "PAVARDĖ": "Šindeikis",
+        "SKYRIUS_PAVADINIMAS": "Gamybos",
+        "VARDAS": "Jaunius"
+    },
+    {
+        "GIMIMO_DATA": "1987-11-12",
+        "PAREIGOS": "Programuotojas",
+        "PAVARDĖ": "Kundrotas",
+        "SKYRIUS_PAVADINIMAS": "Gamybos",
+        "VARDAS": "Rimantas"
+    },
+    {
+        "GIMIMO_DATA": "1990-02-13",
+        "PAREIGOS": "Testuotojas",
+        "PAVARDĖ": "Antanaitis",
+        "SKYRIUS_PAVADINIMAS": "Gamybos",
+        "VARDAS": "Egidijus"
+    },
+    {
+        "GIMIMO_DATA": "1988-09-13",
+        "PAREIGOS": "Testuotojas",
+        "PAVARDĖ": "Antanaitis",
+        "SKYRIUS_PAVADINIMAS": "Gamybos",
+        "VARDAS": "Lukas"
+    }
+]
