@@ -1,0 +1,41 @@
+# Parsisiųskite lentelę (iš: teams > Files > Class material > darbuotojai.db(DARBUOTOJAI.json)) , atsidarykite ją programoje "DB Browser for SQLite" ir skiltyje "Execute SQL" atlikite šias SQL užklausas:
+# 1. Išrinkite visus duomenis iš lentelės “DARBUOTOJAI”.
+# 2. Išrinkite visus duomenis iš stulpelio “GIMIMO_DATA” - lentelėje “DARBUOTOJAS”.
+# 3. Išrinkite visus duomenis iš stulpelių “VARDAS”,”PAVARDĖ”, “PAREIGOS” - lentelėje “DARBUOTOJAI”.
+# 4. Išrinkite skirtingas reikšmes iš stulpelio SKYRIUS_PAVADINIMAS - lentelėje “DARBUOTOJAI”.
+# 5. Išrinkite visus duomenis apie darbuotojus, kurie dirba Gamybos skyriuje.
+# 6. Išrinkite duomenis, kokias pareigas užima Giedrius
+# 7. Išrinkite visus duomenis apie darbuotojus, kurių gimimo data - 1986-09-19
+# 8. Išrinkite darbuotojų vardus, kurių pavardės yra Sabutis
+# 9. Išrinkite duomenis (vardą ir pavardę) apie programuotojus iš Gamybos skyriaus
+# 10. Įterpkite į lentelę “DARBUOTOJAI” naują darbuotoją, užpildydami visus reikiamus laukus (vardą, pavardę, gimimo metus, pareigas, skyriaus pavadinimą).
+# 11. Įterpkite į lentelę “DARBUOTOJAI” naują darbuotoją, užpildydami tik laukus (vardą, pavardę, gimimo metus). Pareigas ir skyriaus pavadinimą palikite neužpildytus.
+# 12. Užpildykite likusius tuščius laukus “DARBUOTOJAI” lentelėje, jūsų prieš tai įterptame įraše. Priskirkite darbuotojui pareigas ir skyrių.
+# 13. Ištrinkite lentelės “DARBUOTOJAI” įrašą, kurio gimimo data yra tokia, kurią jūs sukūrėte.
+# 14. Įterpkite, du darbuotojus, pavarde Antanaitis kurių pareigos būtų “Programuotojas”.
+# 15. Pakeiskite, abiejų Antanaičių pareigas į “Testuotojas” vienu sakiniu.
+# 16. Suskaičiuokite, kiek įmonėje dirba Testuotojų.
+
+-- SELECT * FROM DARBUOTOJAI;
+-- SELECT GIMIMO_DATA FROM DARBUOTOJAI;
+-- SELECT VARDAS, PAVARDĖ, PAREIGOS FROM DARBUOTOJAI;
+-- ELECT DISTINCT SKYRIUS_PAVADINIMAS FROM DARBUOTOJAI;
+-- SELECT * FROM DARBUOTOJAI WHERE SKYRIUS_PAVADINIMAS = "Gamybos";
+-- SELECT PAREIGOS FROM DARBUOTOJAI WHERE VARDAS = "Giedrius";
+-- SELECT * FROM DARBUOTOJAI WHERE GIMIMO_DATA = "1986-09-19";
+-- SELECT VARDAS FROM DARBUOTOJAI WHERE PAVARDĖ = "Sabutis";
+-- ELECT VARDAS, PAVARDĖ FROM DARBUOTOJAI WHERE SKYRIUS_PAVADINIMAS = "Gamybos" AND PAREIGOS = "Programuotojas";
+--INSERT INTO DARBUOTOJAI VALUES ("Lukas", "Siaurusevicius", "1995-12-04", "Programuotojas", "Gamybos");
+-- INSERT INTO DARBUOTOJAI (VARDAS, PAVARDĖ, GIMIMO_DATA) VALUES ("Lukas", "Lukavicius", "1985-05-12");
+--UPDATE DARBUOTOJAI SET PAREIGOS = "Programuotojas", SKYRIUS_PAVADINIMAS = "Gamybos" WHERE PAVARDĖ = "Lukavicius";
+--DELETE FROM DARBUOTOJAI WHERE GIMIMO_DATA = "1985-05-12";
+-- INSERT INTO DARBUOTOJAI (PAVARDĖ, PAREIGOS) VALUES("Antanaitis", "Programuotojas"), ("Antanaitis", "Programuotojas");
+-- UPDATE DARBUOTOJAI SET PAREIGOS = "Testuotojas" WHERE PAVARDĖ = "Antanaitis" AND VARDAS is NULL;
+-- SELECT count(PAREIGOS) FROM DARBUOTOJAI WHERE PAREIGOS = "Testuotojas";
+
+p.s sqlite3 ---tai komentaras
+#output
+Execution finished without errors.
+Result: 18 rows returned in 4ms
+At line 1:
+SELECT * FROM DARBUOTOJAI;
