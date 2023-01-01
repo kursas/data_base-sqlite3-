@@ -1,0 +1,76 @@
+# -*- coding: utf-8 -*-
+# Sukurti programą, kuri:
+# • Sukurtų duomenų bazės failą
+# • Sukurtų lentelę paskaitos su stulpeliais pavadinimas, destytojas ir trukme
+# • Sukurtų tris paskaitas: ('Vadyba', 'Domantas', 40), ('Python', 'Donatas', 80) ir ('Java', 'Tomas', 80)
+# • Atspausdintų tik tas paskaitas, kurių trukmė didesnė už 50
+# • Atnaujintų paskaitos „Python“ pavadinimą į „Python programavimas“
+# • Ištrintų paskaitą, kurios dėstytojas – „Tomas“
+# • Atspausdintų visas paskaitas (visą lentelę)
+
+import sqlite3
+
+conn=sqlite3.connect("D:\\DUMENYS\\DARIUS\\Desktop\\DB\\paskaitos.db")
+c=conn.cursor()
+c.execute("""CREATE TABLE IF NOT EXISTS paskaitos(
+    pavadinimas text,
+    destytojas text,
+    trukme integer
+)
+""")
+c.execute('''INSERT INTO paskaitos(
+   pavadinimas, destytojas, trukme) VALUES 
+   ('Vadyba', 'Domantas', 40)''')
+c.execute('''INSERT INTO paskaitos(
+   pavadinimas, destytojas, trukme) VALUES 
+   ('Python', 'Donatas', 80)''')
+c.execute('''INSERT INTO paskaitos(
+   pavadinimas, destytojas, trukme) VALUES 
+   ('Java', 'Tomas', 70)''')
+
+c.execute('''UPDATE paskaitos SET pavadinimas = "Python programavimas" WHERE trukme>50;''')
+print('\nAfter Updating...\n')
+# Updating
+c.execute('''UPDATE paskaitos SET pavadinimas = "Java" WHERE destytojas='Tomas';''')
+print('\nAfer Updating...\n')
+c.execute('''DELETE from paskaitos where destytojas = 'Tomas';''')
+print('\nAfer Deleting...\n')
+
+c.execute('''SELECT * from paskaitos ;''')
+print(c.fetchall())
+
+
+if c:
+    print("Data Inserted !")
+else:
+    print("Data Insertion Failed !")
+conn.commit()
+conn.close()
+
+#output
+After Updating...
+
+
+Afer Updating...
+
+
+Afer Deleting...
+
+[('Vadyba', 'Domantas', 40), ('Python programavimas', 'Donatas', 80), ('Vadyba', 'Domantas', 40), ('Python programavimas', 'Donatas', 80), ('Vadyba', 'Domantas', 40), ('Python programavimas', 'Donatas', 80), ('Vadyba', 'Domantas', 40), ('Python programavimas', 'Donatas', 80), ('Vadyba', 'Domantas', 40), ('Python programavimas', 'Donatas', 80), ('Vadyba', 'Domantas', 40), ('Python programavimas', 'Donatas', 80)]
+Data Inserted !
+
+Process finished with exit code 0
+
+#from DB browser for SQLite
+Vadyba	Domantas	40
+Python programavimas	Donatas	80
+Vadyba	Domantas	40
+Python programavimas	Donatas	80
+Vadyba	Domantas	40
+Python programavimas	Donatas	80
+Vadyba	Domantas	40
+Python programavimas	Donatas	80
+Vadyba	Domantas	40
+Python programavimas	Donatas	80
+Vadyba	Domantas	40
+Python programavimas	Donatas	80
