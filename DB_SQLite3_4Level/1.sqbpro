@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="D:\DUMENYS\DARIUS\Desktop\1.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="0"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="125"/><column_width id="3" width="1803"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,8:maincustomer"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="customer" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="52"/><column index="2" value="75"/><column index="3" value="82"/><column index="4" value="116"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="order_" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="52"/><column index="2" value="117"/><column index="3" value="162"/><column index="4" value="90"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="product" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="52"/><column index="2" value="118"/><column index="3" value="102"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="product_order" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort><column index="3" mode="0"/></sort><column_widths><column index="1" value="107"/><column index="2" value="146"/><column index="3" value="82"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="status" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="52"/><column index="2" value="149"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">--1.Sukurkite duomenų bazę pagal tokią diagramą:
+-- CREATE TABLE `customer` (
+--   `id` integer PRIMARY KEY,
+--   `f_name` string,
+--   `l_name` string,
+--   `email` string
+-- );
+
+-- CREATE TABLE `status` (
+--   `id` integer PRIMARY KEY,
+--   `name` string
+-- );
+
+-- CREATE TABLE `product` (
+--   `id` integer PRIMARY KEY,
+--   `name` string,
+--   `price` float
+-- );
+-- CREATE TABLE `order_` (
+--   `id` integer PRIMARY KEY,
+--   `customer_id` integer,
+--   `date_` string,
+--   `status_id` integer,
+--    FOREIGN KEY (`customer_id`) REFERENCES `customer` (`id`),
+--    FOREIGN KEY (`status_id`) REFERENCES `status` (`id`)
+-- );
+-- CREATE TABLE `product_order` (
+--   `order_id` integer PRIMARY KEY,
+--   `product_id` integer,
+--   `quantity` integer,
+--    FOREIGN KEY (`order_id`) REFERENCES `order_` (`id`),
+--    FOREIGN KEY (`product_id`) REFERENCES `product` (`id`)
+-- );
+--Užpildykite duomenimis - bent 3 klientai, bent 5 užsakymai, kiekviename jų po 1-3 pozicijas,
+--keletas produktų, keletas užsakymo statusų (pvz, patvirtintas, vykdomas, įvykdytas, atmestas).
+--INSERT INTO &quot;main&quot;.&quot;customer&quot; (&quot;id&quot;, &quot;f_name&quot;, &quot;l_name&quot;, &quot;email&quot;) VALUES ('1', 'Jonas', 'Jonaitis', 'jj@epastas.lt');
+--INSERT INTO &quot;main&quot;.&quot;customer&quot; (&quot;id&quot;, &quot;f_name&quot;, &quot;l_name&quot;, &quot;email&quot;) VALUES ('2', 'Petras', 'Petraitis', 'pp@gmail.com');
+--INSERT INTO &quot;main&quot;.&quot;customer&quot; (&quot;id&quot;, &quot;f_name&quot;, &quot;l_name&quot;, &quot;email&quot;) VALUES ('3', 'Antanas', 'Antanaitis', 'aa@mail.com');
+
+--INSERT INTO &quot;main&quot;.&quot;product&quot; (&quot;id&quot;, &quot;name&quot;, &quot;price&quot;) VALUES ('1', 'smelis', '15.0');
+--INSERT INTO &quot;main&quot;.&quot;product&quot; (&quot;id&quot;, &quot;name&quot;, &quot;price&quot;) VALUES ('2', 'zvyras', '20.0');
+--INSERT INTO &quot;main&quot;.&quot;product&quot; (&quot;id&quot;, &quot;name&quot;, &quot;price&quot;) VALUES ('3', 'juodzemis','40.0');
+--INSERT INTO &quot;main&quot;.&quot;product&quot; (&quot;id&quot;, &quot;name&quot;, &quot;price&quot;) VALUES ('4', 'trasos', '80.0');
+
+--INSERT INTO &quot;main&quot;.&quot;status&quot; (&quot;id&quot;, &quot;Name&quot;) VALUES ('1', 'patvirtinta');
+--INSERT INTO &quot;main&quot;.&quot;status&quot; (&quot;id&quot;, &quot;Name&quot;) VALUES ('2', 'pristatoma');
+--INSERT INTO &quot;main&quot;.&quot;status&quot; (&quot;id&quot;, &quot;Name&quot;) VALUES ('3', 'atlikta');
+
+--INSERT INTO &quot;main&quot;.&quot;order_&quot; (&quot;id&quot;, &quot;date_&quot;, &quot;customer_id&quot;, &quot;status_id&quot;) VALUES ('1', '2021-01-20 12:00:00', '1', '1');
+--INSERT INTO &quot;main&quot;.&quot;order_&quot; (&quot;id&quot;, &quot;date_&quot;, &quot;customer_id&quot;, &quot;status_id&quot;) VALUES ('2', '2020-06-22 14:00:00', '1', '2');
+--INSERT INTO &quot;main&quot;.&quot;order_&quot; (&quot;id&quot;, &quot;date_&quot;, &quot;customer_id&quot;, &quot;status_id&quot;) VALUES ('3', '2022-12-20 18:00:00', '1', '1');
+--INSERT INTO &quot;main&quot;.&quot;order_&quot; (&quot;id&quot;, &quot;date_&quot;, &quot;customer_id&quot;, &quot;status_id&quot;) VALUES ('4', '2019-08-28 15:00:00', '1', '2');
+
+
+--INSERT INTO &quot;main&quot;.&quot;product_order&quot; (&quot;order_id&quot;, &quot;product_id&quot;, &quot;quantity&quot;) VALUES ('2', '1', '3');
+--INSERT INTO &quot;main&quot;.&quot;product_order&quot; (&quot;order_id&quot;, &quot;product_id&quot;, &quot;quantity&quot;) VALUES ('3', '2', '4');
+--INSERT INTO &quot;main&quot;.&quot;product_order&quot; (&quot;order_id&quot;, &quot;product_id&quot;, &quot;quantity&quot;) VALUES ('4', '3', '8');
+
+--1uzklausa:kad rezultate matytųsi užsakymo id, užsakovo pavardė, data, bendra užsakymo suma:
+-- SELECT 	order_.id as &quot;order id&quot;, 
+-- 		order_.date_ as &quot;date&quot;, 
+-- 		customer.l_name as &quot;customer&quot;,
+--         sum(product_order.quantity * product.price) as &quot;price&quot;
+-- FROM product_order
+-- JOIN order_ on order_.id = product_order.order_id 
+-- JOIN product on product.id = product_order.product_id
+-- JOIN customer on customer.id = order_.customer_id
+-- GROUP by order_id
+
+--2uzklausa:kad rezultate matytųsi užsakymo id, pozicijos su kiekiais, kainomis ir bendra pozicijos suma:
+-- SELECT 
+-- 	order_.id, 
+-- 	product.name, 
+-- 	product_order.quantity, 
+-- 	product.price, 
+-- 	product_order.quantity * product.price as &quot;total&quot;
+-- FROM order_
+-- JOIN product_order ON order_.id = product_order.order_id
+-- JOIN product ON product.id = product_order.product_id 
+
+--3uzklausa:prieš tai buvusios užklausos pagrindu sukurkite užklausą, kurioje matytųsi, kiek ir kokio produkto buvo užsakyta:
+-- SELECT 
+-- 	order_.id, 
+-- 	product.name, 
+-- 	sum(product_order.quantity) as &quot;quantity&quot;, 
+-- 	product.price, 
+-- 	sum(product_order.quantity) * product.price as &quot;total&quot;
+-- FROM order_
+-- JOIN product_order ON order_.id = product_order.order_id
+-- JOIN product ON product.id = product_order.product_id
+-- group by product_order.product_id
+
+</sql><current_tab id="0"/></tab_sql></sqlb_project>
